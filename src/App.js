@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
-function makeButton() {
+function MyButton() {
   return (
     <button>
       click
@@ -9,13 +9,13 @@ function makeButton() {
   );
 }
 
-function App() {
+export default function App() {
   return (
-    <div>
-      <h1> hi </h1>
-      <makeButton />
+    <div className="App">
+      <header className="App-header">
+        <h1> hi </h1>
+        <MyButton />
+      </header>
     </div>
   );
 }
-
-export default App;
