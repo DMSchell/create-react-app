@@ -11,11 +11,9 @@ function makeButton() {
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1> hi </h1>
-        <makeButton />
-      </header>
+    <div>
+      <h1> hi </h1>
+      <makeButton />
     </div>
   );
 }
