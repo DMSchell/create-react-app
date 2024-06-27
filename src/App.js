@@ -1,7 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 
-function MyButton() {
+export default function App() {
   const [count, setCount] = useState(0);
 
   function handleClick() {
@@ -9,19 +9,20 @@ function MyButton() {
   }
 
   return (
-    <button onClick={handleClick}>
-      Clicked {count} times
-    </button>
+    <div className="App">
+      <header className="App-header">
+        <h1>Drawing</h1>
+        <h1>You have drawn {count} times</h1>
+        <MyButton onClick={handleClick} />
+      </header>
+    </div>
   );
 }
 
-export default function App() {
+function MyButton({ count, onClick }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1> hi </h1>
-        <MyButton />
-      </header>
-    </div>
+    <button onClick={onClick}>
+      Draw
+    </button>
   );
 }
