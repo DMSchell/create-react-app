@@ -11,15 +11,15 @@ export default function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Drawing</h1>
-        <h1>You have drawn {count} times</h1>
-        <MyButton onClick={handleClick} />
+        <div id="Draw-counter">You have drawn {count} times</div>
+        <div id="Draw-text">Draw a card!</div>
+        <DrawButton onClick={handleClick} />
       </header>
     </div>
   );
 }
 
-function MyButton({ count, onClick }) {
+function DrawButton({ onClick }) {
   return (
     <button onClick={onClick}>
       Draw
